@@ -16,7 +16,9 @@ npm install prisma typescript ts-node @types/node --save-dev
 
 3. tsconfig.json ファイルを作成し、それに次の構成を追加
 
-```tsconfig.json
+tsconfig.json
+
+```
 {
   "compilerOptions": {
     "sourceMap": true,
@@ -42,7 +44,9 @@ npx prisma init
 
 6. env に databaseurl を記述
 
-```.env
+.env
+
+```
 DATABASE_URL="postgresql://johndoe:randompassword@localhost:5432/mydb?schema=public"
 ```
 
@@ -66,7 +70,9 @@ DATABASE_URL="postgresql://janedoe:janedoe@localhost:5432/janedoe?schema=hello-p
 
 7. prisma に model を記述
 
-```prisma/schema.prisma
+prisma/schema.prisma
+
+```
 model Post {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
@@ -94,7 +100,9 @@ model User {
 }
 ```
 
-```docker-compose.yaml
+docker-compose.yaml
+
+```
 version: "3.1"
 
 services:
@@ -129,7 +137,9 @@ npm install @prisma/client
 
 9. index.ts にコードを記述
 
-```index.ts
+index.ts
+
+```
 import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient()
@@ -155,7 +165,9 @@ npx ts-node index.ts
 // result -> []
 ```
 
-```index.ts
+index.ts
+
+```
 async function main() {
   await prisma.user.create({
     data: {
@@ -188,7 +200,9 @@ npx ts-node index.ts
 
 更新する場合は下記
 
-```index.ts
+index.ts
+
+```
 async function main() {
   const post = await prisma.post.update({
     where: { id: 1 },
@@ -223,6 +237,9 @@ https://github.com/prisma/prisma-examples/tree/latest/typescript/graphql
 
 - Vercel
   https://www.prisma.io/docs/guides/deployment/deployment-guides/deploying-to-vercel
+
+  - GitHub
+    https://github.com/prisma/deployment-example-vercel
 
 - Heroku
   https://www.prisma.io/docs/guides/deployment/deployment-guides/deploying-to-heroku
