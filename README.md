@@ -18,7 +18,7 @@ npm install prisma typescript ts-node @types/node --save-dev
 
 tsconfig.json
 
-```
+```tsconfig.json
 {
   "compilerOptions": {
     "sourceMap": true,
@@ -46,7 +46,7 @@ npx prisma init
 
 .env
 
-```
+```.env
 DATABASE_URL="postgresql://johndoe:randompassword@localhost:5432/mydb?schema=public"
 ```
 
@@ -64,7 +64,9 @@ postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=SCHEMA
 
 prisma では下記のようにする
 
-```
+.env
+
+```.env
 DATABASE_URL="postgresql://janedoe:janedoe@localhost:5432/janedoe?schema=hello-prisma"
 ```
 
@@ -72,7 +74,7 @@ DATABASE_URL="postgresql://janedoe:janedoe@localhost:5432/janedoe?schema=hello-p
 
 prisma/schema.prisma
 
-```
+```prisma/schema.prisma
 model Post {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
@@ -102,7 +104,7 @@ model User {
 
 docker-compose.yaml
 
-```
+```docker-compose.yaml
 version: "3.1"
 
 services:
@@ -139,7 +141,7 @@ npm install @prisma/client
 
 index.ts
 
-```
+```index.ts
 import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient()
@@ -167,7 +169,7 @@ npx ts-node index.ts
 
 index.ts
 
-```
+```index.ts
 async function main() {
   await prisma.user.create({
     data: {
@@ -202,7 +204,7 @@ npx ts-node index.ts
 
 index.ts
 
-```
+```index.ts
 async function main() {
   const post = await prisma.post.update({
     where: { id: 1 },
