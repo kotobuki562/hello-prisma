@@ -218,3 +218,14 @@ https://github.com/prisma/prisma-examples/tree/latest/typescript/grpc
 
 Apollo Server
 https://github.com/prisma/prisma-examples/tree/latest/typescript/graphql
+
+## デプロイ方法
+
+- Vercel
+  https://www.prisma.io/docs/guides/deployment/deployment-guides/deploying-to-vercel
+
+- Heroku
+  https://www.prisma.io/docs/guides/deployment/deployment-guides/deploying-to-heroku
+
+- AWS Lambda
+  https://www.prisma.io/docs/guides/deployment/deployment-guides/deploying-to-aws-lambda/
