@@ -206,3 +206,15 @@ DB 内のデータをビジュアル化できる
 ```
 npx prisma studio
 ```
+
+Next.js+Graphql のフルスタック構成
+https://github.com/prisma/prisma-examples/tree/latest/typescript/graphql-nextjs
+
+Next.js+REST API のフルスタック構成
+https://github.com/prisma/prisma-examples/tree/latest/typescript/rest-nextjs-api-routes
+
+grpc でサーバー構築
+https://github.com/prisma/prisma-examples/tree/latest/typescript/grpc
+
+Apollo Server
+https://github.com/prisma/prisma-examples/tree/latest/typescript/graphql
