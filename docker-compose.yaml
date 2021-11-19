@@ -1,0 +1,17 @@
+version: "3.1"
+
+services:
+  db:
+    image: postgres:13-alpine
+    container_name: blitz-blog-postgres
+    ports:
+      - "5432:5432"
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: testdb
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+volumes:
+  dbdata:
